@@ -11,7 +11,7 @@
 
 
 // to use current time, disable warning 4996
-#pragma warning(disable : 4996).
+#pragma warning(disable : 4996)
 
 using namespace std;
 
