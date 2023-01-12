@@ -23,10 +23,9 @@ float convertCelsius(float tempc)
 // apapted file reading process from : https://www.youtube.com/watch?v=x1-3CmFNbso
 int main()
 {
-    Temps TempsObj;
+
 
     system("COLOR 0A");
-
     //initialize variables
     vector<string> names;
     vector<string> temps;
@@ -62,17 +61,17 @@ int main()
             //tell stream the order of variables to read
             inStream >> name >> temp;
         }
+
+
     }
 
     //close the file reading stream when finished
     inStream.close();
     cout << endl;
+    Temps TempsObj(names, temps);
 
-    TempsObj.SetTemps(temps);
-    TempsObj.SetCity(names);
-   
-    TempsObj.PrintFileContents(names, temps);
-    TempsObj.WriteFile(names, temps);
+    TempsObj.PrintFileContents();
+    TempsObj.WriteFile();
 
 
 }

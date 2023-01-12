@@ -13,21 +13,32 @@
 
 using namespace std;
 
+Temps::Temps(std::vector<string> cityInput, std::vector<string> tempsInput)
+
+{
+    SetCity(cityInput);
+    SetTemps(tempsInput);
+}
 // setters
 void Temps::SetTemps(std::vector<string> tempsInput){   
 
-    tempsInput = tempsInput;
+    this->tempsInput = tempsInput;
 }
 
 void Temps::SetCity(std::vector<string> cityInput) {
     
-    cityInput = cityInput;
+    this->cityInput = cityInput;
 }
 
 // getters
 std::vector<string> Temps::GetTemps(){    return tempsInput;}
 
 std::vector<string> Temps::GetCity(){  return cityInput;}
+
+void ReadFileInput()
+{
+    cout << "nothing";
+}
 
 // convert temperature function
 float Temps::ConvertCelsius(float tempc)
@@ -36,7 +47,7 @@ float Temps::ConvertCelsius(float tempc)
 }
 
 // function to print file contents to the console
-void Temps::PrintFileContents(std::vector<string> cityInput, std::vector<string> tempsInput)
+void Temps::PrintFileContents()
 {
 
     cout << "=============================\n";
@@ -52,7 +63,7 @@ void Temps::PrintFileContents(std::vector<string> cityInput, std::vector<string>
 }
 
 // function to write a file with converted temperatures as a text file. 
-void Temps::WriteFile(std::vector<string> cityInput, std::vector<string> tempsInput)
+void Temps::WriteFile()
 {
 
     //convert string vector to int vector
